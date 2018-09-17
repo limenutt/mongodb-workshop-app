@@ -1,50 +1,51 @@
 {
   "name": "ts-node-starter",
   "version": "1.0.0",
-  "description": "ts-node-starter",
+  "description": "A starter app for node backends, utils, workers and playgrounds",
   "main": "lib/app.js",
   "scripts": {
     "test-w": "npm run jest -- --watchAll",
     "prestart": "npm run build",
-    "start": "node lib/app",
+    "start": "node lib/bootstrappedApp",
     "start-w": "ts-node-dev --inspect=`if [ -z \"${DEBUG_PORT}\" ]; then echo \"9229\"; else echo \"${DEBUG_PORT}\"; fi` --type-check --no-deps --no-cache src/app",
-    "lint": "./node_modules/.bin/tslint src/**/*.ts",
+    "lint": "./node_modules/.bin/tslint --project tsconfig.json src/**/*.ts",
     "test": "npm run jest",
     "test:e2e": "jest --runInBand e2e_tests/*.test.ts",
     "jest": "jest --coverage",
     "build": "tsc",
-    "reinstall": "rm -rf node_modules && npm install"
+    "reinstall": "rm -rf node_modules && npm install",
+    "reinstall:hard": "rm -f package-lock.json && npm run reinstall"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skychute/ts-node-starter.git"
   },
-  "author": "Mikhail Asavkin <ma@skychute.com.au>",
-  "license": "ISC",
+  "author": {
+    "name": "Mikhail Asavkin",
+    "email": "ma@skychute.com.au"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Skychute/ts-node-starter/issues"
   },
   "homepage": "https://github.com/Skychute/ts-node-starter#readme",
   "dependencies": {
     "@types/node": "^10.9.4",
-    "babel-polyfill": "^6.16.0",
-    "babel-runtime": "^6.11.6",
     "reflect-metadata": "^0.1.12",
-    "source-map-support": "^0.5.4",
-    "typescript": "^2.8.1",
+    "source-map-support": "^0.5.9",
+    "typescript": "^3.0.3",
     "uuid": "^3.2.1",
     "winston": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.4",
+    "@types/source-map-support": "^0.4.1",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.1.4",
     "ts-node-dev": "^1.0.0-pre.22",
-    "tslint": "^5.9.1",
-    "tslint-microsoft-contrib": "^5.0.3"
+    "tslint": "^5.11.0",
+    "tslint-microsoft-contrib": "^5.2.1",
+    "tslint-strict-null-checks": "^1.0.1"
   },
   "jest": {
     "transform": {

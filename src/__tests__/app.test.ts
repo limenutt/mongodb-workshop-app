@@ -1,5 +1,7 @@
 import { logger } from '../logger';
-
+/**
+ * Dummy tests
+ */
 describe('Dummy test suite', () => {
   describe('Dummy test sub suite A', () => {
     beforeAll(() => {

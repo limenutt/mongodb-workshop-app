@@ -1,3 +1,6 @@
+/**
+ * Logger
+ */
 import { createLogger, format, Logger as WinstonLogger, transports } from 'winston';
 export const logger = createLogger(
   {

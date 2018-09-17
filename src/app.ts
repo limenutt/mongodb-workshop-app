@@ -1,13 +1,11 @@
-/* tslint:disable: no-require-imports no-var-requires */
-require('source-map-support').install();
-if (!(<any>global)._babelPolyfill) {
-  require('babel-polyfill');
-}
+// tslint:disable-next-line:no-import-side-effect
 import 'reflect-metadata';
 import { logger } from './logger';
-
+/**
+ * This is an application entrypoint
+ */
 (async () => {
   logger.info('Hello world');
-})().catch(error =>
-  logger.error('error during server start:' + JSON.stringify(error.stack))
+})().catch((error: Error) =>
+  logger.error(`error during server start:${JSON.stringify(error.stack)}`)
 );
