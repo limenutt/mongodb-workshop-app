@@ -18,17 +18,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Skychute/ts-node-starter.git"
+    "url": "git+https://github.com/limenutt/ts-node-starter.git"
   },
   "author": {
     "name": "Mikhail Asavkin",
-    "email": "ma@skychute.com.au"
+    "email": "limenutt@gmail.com.au"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Skychute/ts-node-starter/issues"
+    "url": "https://github.com/limenutt/ts-node-starter/issues"
   },
-  "homepage": "https://github.com/Skychute/ts-node-starter#readme",
+  "homepage": "https://github.com/limenutt/ts-node-starter#readme",
   "dependencies": {
     "@types/node": "^10.9.4",
     "reflect-metadata": "^0.1.12",
