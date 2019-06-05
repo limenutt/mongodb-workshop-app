@@ -8,6 +8,7 @@
     "prestart": "npm run build",
     "start": "node lib/bootstrappedApp",
     "start-w": "ts-node-dev --inspect=`if [ -z \"${DEBUG_PORT}\" ]; then echo \"9229\"; else echo \"${DEBUG_PORT}\"; fi` --type-check --no-deps --no-cache src/app",
+    "start-d": "ts-node-dev --inspect=`if [ -z \"${DEBUG_PORT}\" ]; then echo \"9229\"; else echo \"${DEBUG_PORT}\"; fi` --inspect-brk --type-check --no-deps --no-cache src/app",
     "lint": "./node_modules/.bin/tslint --project tsconfig.json src/**/*.ts",
     "test": "npm run jest",
     "test:e2e": "jest --runInBand e2e_tests/*.test.ts",
@@ -33,19 +34,19 @@
     "@types/node": "^10.9.4",
     "reflect-metadata": "^0.1.12",
     "source-map-support": "^0.5.9",
-    "typescript": "^3.0.3",
     "uuid": "^3.2.1",
     "winston": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
     "@types/source-map-support": "^0.4.1",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "ts-jest": "^23.1.4",
-    "ts-node-dev": "^1.0.0-pre.22",
+    "ts-node-dev": "^1.0.0-pre.39",
     "tslint": "^5.11.0",
     "tslint-microsoft-contrib": "^5.2.1",
-    "tslint-strict-null-checks": "^1.0.1"
+    "tslint-strict-null-checks": "^1.0.1",
+    "typescript": "^3.5.1"
   },
   "jest": {
     "transform": {
