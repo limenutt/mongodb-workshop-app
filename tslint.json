@@ -2,12 +2,12 @@
   "rulesDirectory": ["node_modules/tslint-microsoft-contrib", "node_modules/tslint-strict-null-checks/rules"],
   "extends": ["tslint-microsoft-contrib"],
   "rules":{
+      "no-floating-promises": false,
       "no-relative-imports": false,
       "typedef": [
         true,
         "call-signature",
         "parameter",
-        "arrow-parameter",
         "property-declaration",
         "member-variable-declaration",
         "array-destructuring"

@@ -3,8 +3,9 @@ A starting project for a typescript node app
 ## Setting up the enviroment
 Just run `npm i`
 ## Application
-Apllication source code should be put in src/app
-To run the application use either `npm run start-w` (for development) or, if you need to set enviroment variables, you can do `cp scripts/run-local-sample.sh scripts/run-local.sh`, update the scripts/run-local.sh to include the enviroment variables and run it `sh scripts/run-local.sh`.
+Application source code should be put in src/app
+### Running
+Use npm `run start-w` to run in the development mode.
 
 ## Tests
 We are using Jest here. `npm test` will run the tests once and `npm run test-w` will run then in the watch mode (recommended for development)

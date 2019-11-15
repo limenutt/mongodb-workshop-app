@@ -22,3 +22,5 @@ TODO\.yml
 scripts/run-local-docker\.sh
 
 scripts/run-local\.sh
+
+pipelineOutput.json
